@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Mar 19 16:57:26 IST 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.path=classes.dex
+0.set=DEX
+count=1

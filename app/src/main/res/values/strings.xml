@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name" translatable="false">SAFS</string>
+
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string-array name="sports_titles">
+        <item>Baseball</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Bowling</item>
+        <item>Cycling</item>
+        <item>Golf</item>
+        <item>Running</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <array name="sports_images">
+        <item>@drawable/img_baseball</item>
+        <item>@drawable/img_badminton</item>
+        <item>@drawable/img_basketball</item>
+        <item>@drawable/img_bowling</item>
+        <item>@drawable/img_cycling</item>
+        <item>@drawable/img_golf</item>
+        <item>@drawable/img_running</item>
+        <item>@drawable/img_soccer</item>
+        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_tabletennis</item>
+        <item>@drawable/img_tennis</item>
+
+    </array>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_testing_bottom_navigation">TestingBottomNavigation</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+    <string-array name="Time">
+
+        <item>Morning(12AM to 9AM)</item>
+        <item>Noon(9AM to 4PM)</item>
+        <item>Evening(4PM to 9PM)</item>
+        <item>Night(9PM to 12AM)</item>
+
+    </string-array>
+
+    <string-array name="Genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- Intent EXTRAS -->
+    <string name="calling_activity">calling_activity</string>
+
+    <!-- Activity names -->
+    <string name="editprofile_activity">editprofile_activity</string>
+    
+    <!-- Dialog names -->
+    <string name="confirm_password_dialog">ConfirmPasswordDialog</string>
+
+    <!-- Firebase Database Fields-->
+    <string name="dbname_users">users</string>
+    <string name="dbname_user_account_settings">user_account_settings</string>
+    <string name="dbname_activities">activities</string>
+    <string name="field_profilephoto">profile_photo</string>
+    <string name="dbname_user_activities">user_activities</string>
+    <string name="field_displayname">display_name</string>
+    <string name="field_email">email</string>
+    <string name="field_phonenumber">phone_number</string>
+    <string name="field_userID">user_id</string>
+    <string name="field_activities">activities</string>
+    <string name="field_friends">friends</string>
+    <string name="field_location">location</string>
+    <string name="field_time">time</string>
+    <string name="field_sport_name">sport_name</string>
+    <string name="field_host_name">host_name</string>
+    <string name="field_date">date</string>
+
+    //Chat
+    <string name="input_placeholder">Write a message</string>
+
+
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <!--- Top Toolbar -->
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+    </RelativeLayout>
+
+
+    <!-- Middle Layout -->
+    <RelativeLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RelativeLayoutmore"
+        android:background="@color/grey">
+
+        <TextView
+            android:id="@+id/textview_activityprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Activity Profile"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textview_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_activityprofile"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Friends"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textview_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_friends"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+
+    </RelativeLayout>
+
+    <!--- Bottom Navigation View -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menulayout">
+
+        <include layout="@layout/layout_bottom_navigation_view" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

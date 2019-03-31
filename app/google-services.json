@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "425671879038",
+    "firebase_url": "https://safs-fefb8.firebaseio.com",
+    "project_id": "safs-fefb8",
+    "storage_bucket": "safs-fefb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425671879038:android:05b0937ba4d15049",
+        "android_client_info": {
+          "package_name": "com.test.safs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425671879038-jk3v7qkp2c05jq484527mdbkdibdorv2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.test.safs",
+            "certificate_hash": "1cbcdd9fca2778fb0ee2860baffbf95da8f78188"
+          }
+        },
+        {
+          "client_id": "425671879038-184gub1tnsvgf45lvvqb2lbu5slr6llk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7MbExat8A4ergb1MqKlOt2Pn9nOxrMuI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425671879038-184gub1tnsvgf45lvvqb2lbu5slr6llk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

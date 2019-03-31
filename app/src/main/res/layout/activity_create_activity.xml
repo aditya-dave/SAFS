@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Activity"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textAlignment="center"/>
+
+        <!--<ImageView android:src=
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />-->
+
+        <!-- Sport name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:labelFor="@id/edittext_sport">
+            <EditText android:id="@+id/edittext_sport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nextFocusDown="@id/edittext_location"
+                android:hint="Eg. Football / Cricket / Basketball" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Area Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/edittext_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nextFocusDown="@id/edittext_date"
+                android:hint="Locality or Venue Name" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <!--  Date Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/edittext_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:nextFocusDown="@id/spinner_time"
+                android:hint="Date"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!-- Time -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            style="@style/InputLabel" />
+     <Spinner
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/spinner_time"></Spinner>
+
+        <!-- Create Activity Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_createActivity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="Create Activity"/>
+
+    </LinearLayout>
+</ScrollView>

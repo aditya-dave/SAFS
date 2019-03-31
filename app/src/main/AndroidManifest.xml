@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.safs">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Include following permission if you load images from Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Include following permission if you want to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.Dark"></activity>
+        <activity
+            android:name=".Engage.EngageActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".Profile.ProfileActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".Profile.EditProfileActivity"
+            android:theme="@style/AppTheme.Dark"></activity>
+        <activity
+            android:name=".Profile.UserProfile"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".Home.CreateActivity"
+            android:parentActivityName=".Home.HomeActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".ChooseSports"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".LoginActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <!--<activity android:name=".Home.ChatActivity"
+            android:theme="@style/AppTheme.Dark"/> -->
+    </application>
+
+</manifest>
