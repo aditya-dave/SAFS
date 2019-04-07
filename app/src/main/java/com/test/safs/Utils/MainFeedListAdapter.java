@@ -101,7 +101,7 @@ public class MainFeedListAdapter extends ArrayAdapter<Activity> {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
-                    currenthost_name = singleSnapshot.getValue(UserAccountSettings.class).getDisplay_name();
+                    currenthost_name = singleSnapshot.getValue(UserAccountSettings.class).getname();
                 }
 
             }

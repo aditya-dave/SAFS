@@ -1,6 +1,7 @@
 package com.test.safs.Home;
 
 import android.app.DatePickerDialog;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -29,9 +30,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.test.safs.Profile.EditProfileActivity;
 import com.test.safs.R;
 import com.test.safs.Utils.FirebaseMethods;
+import com.test.safs.Utils.ImageManager;
+import com.test.safs.Utils.UniversalImageLoader;
 import com.test.safs.models.Activity;
+import com.test.safs.models.User;
+import com.test.safs.models.UserAccountSettings;
+import com.test.safs.models.UserActivitiesJoined;
 import com.test.safs.models.UserSettings;
 
 import java.text.DateFormat;
@@ -58,10 +66,13 @@ public class CreateActivity extends AppCompatActivity implements DatePickerDialo
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
     private UserSettings mUserSettings;
+    private UserAccountSettings mUserAccountSettings;
 
     //Variables
     private String append = "file://";
     private int activities_count = 0;
+    private String host_name;
+    private Activity activity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -72,7 +83,6 @@ public class CreateActivity extends AppCompatActivity implements DatePickerDialo
 
 
         //Initializing the widgets
-
         edittext_sport_name = (EditText) findViewById(R.id.edittext_sport);
         Spinner spinner = findViewById(R.id.spinner_time);
         edittext_date = (EditText) findViewById(R.id.edittext_date);
@@ -101,21 +111,24 @@ public class CreateActivity extends AppCompatActivity implements DatePickerDialo
                 Log.d(TAG, "onClick: Attempting to create a new activity");
                 Toast.makeText(CreateActivity.this, "Attempting to create a new activity", Toast.LENGTH_SHORT).show();
                 //String host_name = mUserSettings.getSettings().getDisplay_name();
-                String host_name = mAuth.getCurrentUser().getDisplayName();
+                //String host_name = mAuth.getCurrentUser().getDisplayName();
+                final Activity activity = new Activity();
+                /*Log.d(TAG, mUserAccountSettings.getDisplay_name());
+                Toast.makeText(CreateActivity.this, mUserAccountSettings.getDisplay_name(), Toast.LENGTH_LONG).show();*/
+                //String host_name=activity.getName();
                 String date = edittext_date.getText().toString();
                 String sport_name = edittext_sport_name.getText().toString();
                 String location = edittext_location.getText().toString();
-
-                Activity activity = new Activity();
                 activity.setLocation(location);
-                activity.setName(host_name);
                 activity.setSport_name(sport_name);
                 activity.setDate(date);
                 activity.setProfilephoto("");
                 activity.setTime(time);
-                String activity_key = mFirebaseMethods.createnewActivity(host_name, sport_name, date, location, time,activities_count);
+                Log.d(TAG, "onClick: Calling createnewActivity in FirebaseMethods");
+                String activity_key = mFirebaseMethods.createnewActivity(host_name, sport_name, date, location, time, activities_count);
                 activity.setKey(activity_key);
                 finish();
+
             }
         });
 
@@ -140,7 +153,7 @@ public class CreateActivity extends AppCompatActivity implements DatePickerDialo
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                Log.d(TAG, "Value is: " + dataSnapshot);
+                Log.d(TAG, "Value in setUpFirebaseAuth is: " + dataSnapshot);
 
                 activities_count = mFirebaseMethods.getActivitiesCount(dataSnapshot);
                 Log.d(TAG, "onDataChange: activities count" + activities_count);

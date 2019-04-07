@@ -120,7 +120,7 @@ public class UserProfile extends AppCompatActivity {
         UniversalImageLoader.setImage(settings.getProfile_photo(),profilephoto,null,"");
         mProgressBar.setVisibility(View.GONE);
 
-        String nameUpper = settings.getDisplay_name();
+        String nameUpper = settings.getname();
         String nameCap = nameUpper.substring(0,1).toUpperCase() + nameUpper.substring(1);
         name.setText(nameCap);
         activities.setText(String.valueOf(settings.getactivities()));

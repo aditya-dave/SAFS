@@ -66,9 +66,11 @@
     <string name="dbname_users">users</string>
     <string name="dbname_user_account_settings">user_account_settings</string>
     <string name="dbname_activities">activities</string>
-    <string name="field_profilephoto">profile_photo</string>
+    <string name="dbname_user_activities_joined">user_activities_joined</string>
+    <string name="field_profilephoto">profilephoto</string>
+    <string name="field_profile_photo">profile_photo</string>
     <string name="dbname_user_activities">user_activities</string>
-    <string name="field_displayname">display_name</string>
+    <string name="field_displayname">name</string>
     <string name="field_email">email</string>
     <string name="field_phonenumber">phone_number</string>
     <string name="field_userID">user_id</string>

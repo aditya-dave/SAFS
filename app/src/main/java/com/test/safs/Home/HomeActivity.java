@@ -24,10 +24,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.test.safs.Engage.EngageActivity;
+import com.test.safs.Profile.EditProfileActivity;
 import com.test.safs.Profile.ProfileActivity;
 import com.test.safs.R;
 import com.test.safs.Utils.SectionsPagerAdapter;
+import com.test.safs.Utils.UniversalImageLoader;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -67,7 +70,7 @@ public class HomeActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: starting ");
 
         setUpViewPager();
-
+        initImageLoader();
         TextView textView_createActivity = findViewById(R.id.textview_CreateActivity);
         textView_createActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +112,12 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    private void initImageLoader() {
+        UniversalImageLoader universalImageLoader = new UniversalImageLoader(HomeActivity.this);
+        ImageLoader.getInstance().init(universalImageLoader.getConfig());
+
+    }
+
     private void setUpViewPager(){
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new UpcomingFragment());
@@ -117,6 +126,7 @@ public class HomeActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
+        viewPager.setOffscreenPageLimit(3);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);

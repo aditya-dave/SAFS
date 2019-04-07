@@ -52,6 +52,7 @@
 
     <!-- Middle Layout -->
     <RelativeLayout
+        android:id="@+id/rellayoutcenterviewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/RelativeLayout1"
@@ -64,10 +65,10 @@
     <!--- Bottom Navigation View -->
 
     <RelativeLayout
+        android:id="@+id/rellayoutbottomnav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/RelativeLayout1"
-        android:layout_alignParentBottom="true">
+        android:layout_alignBottom="@id/rellayoutcenterviewpager">
 
         <include layout="@layout/layout_bottom_navigation_view" />
 

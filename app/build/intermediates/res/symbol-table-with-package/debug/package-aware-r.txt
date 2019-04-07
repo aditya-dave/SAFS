@@ -1301,6 +1301,7 @@ id invisible
 id italic
 id item_mainfeed
 id item_touch_helper_previous_elevation
+id key
 id labeled
 id largeLabel
 id left
@@ -1357,11 +1358,14 @@ id progress_circular
 id progress_horizontal
 id radio
 id recyclerview
+id recyclerviewjoined
 id rellayout1
 id rellayout2
 id rellayout3
 id rellayout4
 id rellayout5
+id rellayoutbottomnav
+id rellayoutcenterviewpager
 id rellayoutmain
 id right
 id right_icon
@@ -1521,6 +1525,7 @@ layout activity_editprofile
 layout activity_engage
 layout activity_home
 layout activity_main
+layout activity_open_activity
 layout activity_profile
 layout activity_signup
 layout activity_user_profile
@@ -1659,6 +1664,7 @@ string confirm_password_dialog
 string dbname_activities
 string dbname_user_account_settings
 string dbname_user_activities
+string dbname_user_activities_joined
 string dbname_users
 string default_web_client_id
 string editprofile_activity
@@ -1672,6 +1678,7 @@ string field_friends
 string field_host_name
 string field_location
 string field_phonenumber
+string field_profile_photo
 string field_profilephoto
 string field_sport_name
 string field_time

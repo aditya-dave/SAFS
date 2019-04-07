@@ -83,7 +83,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
     private ImageView mProfilephoto;
     private ImageView back_arrow;
     private ImageView checkmark;
-
+    private String mProfileImageUrl;
 
     //Variables
     private UserSettings mUserSettings;
@@ -226,7 +226,19 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
                             progressDialog.setMessage("Uploaded "+(int)progress+"%");
                         }
                     });
-
+            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                @Override
+                public void onSuccess(Uri uri) {
+                    // Got the download URL for 'users/me/profile.png'
+                    mFirebaseMethods.updateprofilephoto(uri.toString());
+                    mProfileImageUrl = uri.toString();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                }
+            });
         }
     }
 
@@ -259,7 +271,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
         UniversalImageLoader.setImage(settings.getProfile_photo(), mProfilephoto, progressBar, "");
 
 
-        String nameUpper = settings.getDisplay_name();
+        String nameUpper = settings.getname();
         String nameCap = nameUpper.substring(0, 1).toUpperCase() + nameUpper.substring(1);
         mDisplayname.setText(nameCap);
         mEmail.setText(userSettings.getUser().getEmail());
@@ -333,7 +345,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
         /**
          * Change the rest of the settings that do not require uniqueness
          */
-        if (!mUserSettings.getSettings().getDisplay_name().equals(displayname)) {
+        if (!mUserSettings.getSettings().getname().equals(displayname)) {
             //update displayname
             mFirebaseMethods.updateUserAccountSettings(displayname, 0);
             Log.d(TAG, "saveProfileSettings: Display name updated");

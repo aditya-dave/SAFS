@@ -54,6 +54,8 @@
             android:name=".SignupActivity"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme.Dark" />
+        <activity android:name=".Home.OpenActivity"
+            android:theme="@style/AppTheme.Dark"/>
         <!--<activity android:name=".Home.ChatActivity"
             android:theme="@style/AppTheme.Dark"/> -->
     </application>

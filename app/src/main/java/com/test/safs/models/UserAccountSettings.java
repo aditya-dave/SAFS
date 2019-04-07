@@ -6,13 +6,13 @@ import android.os.Parcelable;
 public class UserAccountSettings implements Parcelable {
 
     private long activities;
-    private String display_name;
+    private String name;
     private long friends;
     private String profile_photo;
 
-    public UserAccountSettings(long activities, String display_name, long friends, String profile_photo) {
+    public UserAccountSettings(long activities, String name, long friends, String profile_photo) {
         this.activities = activities;
-        this.display_name = display_name;
+        this.name = name;
         this.friends = friends;
         this.profile_photo = profile_photo;
     }
@@ -22,7 +22,7 @@ public class UserAccountSettings implements Parcelable {
 
     protected UserAccountSettings(Parcel in) {
         activities = in.readLong();
-        display_name = in.readString();
+        name = in.readString();
         friends = in.readLong();
         profile_photo = in.readString();
     }
@@ -47,12 +47,12 @@ public class UserAccountSettings implements Parcelable {
         this.activities = activities;
     }
 
-    public String getDisplay_name() {
-        return display_name;
+    public String getname() {
+        return name;
     }
 
-    public void setDisplay_name(String display_name) {
-        this.display_name = display_name;
+    public void setname(String name) {
+        this.name = name;
     }
 
     public long getFriends() {
@@ -75,7 +75,7 @@ public class UserAccountSettings implements Parcelable {
     public String toString() {
         return "user_account_settings{" +
                 "activities=" + activities +
-                ", display_name='" + display_name + '\'' +
+                ", name='" + name + '\'' +
                 ", friends=" + friends +
                 ", profile_photo='" + profile_photo + '\'' +
                 '}';
@@ -89,7 +89,7 @@ public class UserAccountSettings implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeLong(activities);
-        parcel.writeString(display_name);
+        parcel.writeString(name);
         parcel.writeLong(friends);
         parcel.writeString(profile_photo);
     }

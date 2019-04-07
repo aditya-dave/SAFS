@@ -1,4 +1,10 @@
-#Sat Mar 30 08:26:31 IST 2019
-base.0=C\:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+#Sun Apr 07 23:15:59 IST 2019
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=C\:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+base.1=C\:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.0=C\:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out

@@ -12,16 +12,16 @@
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\drawable\\ic_mtrl_chip_close_circle.xml"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\b492bf652c3265d47dd2baaf3743ae30\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\b492bf652c3265d47dd2baaf3743ae30\\res\\color\\common_google_signin_btn_tint.xml"
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
@@ -60,24 +60,24 @@
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\b492bf652c3265d47dd2baaf3743ae30\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
-    },
-    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\b492bf652c3265d47dd2baaf3743ae30\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light.xml.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\b492bf652c3265d47dd2baaf3743ae30\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_borderless_material.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light.xml.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\b492bf652c3265d47dd2baaf3743ae30\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -96,20 +96,20 @@
         "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml"
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_confirm_password.xml.flat",
         "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\dialog_confirm_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_linear_in.xml.flat",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\drawable\\img_running.jpg"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\0871a9152f007a2ac1b546250d2b28a6\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\0871a9152f007a2ac1b546250d2b28a6\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_message_fragment_tab.xml.flat",
@@ -152,16 +152,16 @@
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_upcoming.xml.flat",
         "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\fragment_upcoming.xml"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1022,6 +1022,10 @@
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_open_activity.xml.flat",
+        "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\activity_open_activity.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
