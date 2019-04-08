@@ -1,9 +1,14 @@
 package com.test.safs.Utils;
 
+import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
+import android.net.Uri;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -13,11 +18,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.test.safs.Home.HomeActivity;
+import com.test.safs.Profile.EditProfileActivity;
 import com.test.safs.R;
 import com.test.safs.models.Activity;
 
@@ -42,6 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     }
 
 
+
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
@@ -50,13 +60,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         public CoordinatorLayout item_mainfeed;
 
         public de.hdodenhof.circleimageview.CircleImageView profilephoto;
+        public ImageView mProfilephoto;
         public TextView host_name;
         public TextView sport_name;
         public TextView time;
         public TextView date;
         public TextView location;
+        public TextView key;
 
-        public MyViewHolder(View itemView) {
+
+        public MyViewHolder(final View itemView) {
             super(itemView);
             item_mainfeed = (CoordinatorLayout) itemView.findViewById(R.id.item_mainfeed);
             this.profilephoto = (de.hdodenhof.circleimageview.CircleImageView) itemView.findViewById(R.id.profilephoto);
@@ -65,16 +78,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
             this.time = (TextView) itemView.findViewById(R.id.time);
             this.date = (TextView) itemView.findViewById(R.id.date);
             this.location = (TextView) itemView.findViewById(R.id.location);
+            this.key = (TextView) itemView.findViewById(R.id.key);
+            //this.mProfilephoto = (ImageView) itemView.findViewById(R.id.profilephoto);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    Log.d(TAG, "onClick: Item Clicked" + getAdapterPosition());
-
-
-                }
-            });
         }
     }
 
@@ -89,18 +95,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
                 .inflate(R.layout.layout_mainfeed_listitem, parent, false);
         final MyViewHolder vh = new MyViewHolder(view);
 
+
         //Dialong initialization
-
-        myDialog = new Dialog(context);
+        /*myDialog = new Dialog(context);
         myDialog.setContentView(R.layout.dialog_join_activity);
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));*/
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Button buttonJoinActivity = (Button) myDialog.findViewById(R.id.buttonJoinActivity);
                 listener.onItemClick(view,vh.getAdapterPosition());
-                myDialog.show();
             }
         });
 
@@ -114,13 +117,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         // - replace the contents of the view with that element
 
         Activity activity = mDataset.get(position);
-
-        holder.profilephoto.setImageURI(null);
+        //ImageView mProfilephoto = (ImageView) holder.mProfilephoto;
+        String imgUrl = mDataset.get(position).getProfilephoto();
+        Log.d(TAG, "onBindViewHolder: "+imgUrl);
+        UniversalImageLoader.setImage(imgUrl,holder.profilephoto,null,"");
         holder.host_name.setText(mDataset.get(position).getName());
         holder.sport_name.setText(mDataset.get(position).getSport_name());
         holder.time.setText(mDataset.get(position).getTime());
         holder.date.setText(mDataset.get(position).getDate());
         holder.location.setText(mDataset.get(position).getLocation());
+        holder.key.setText(mDataset.get(position).getKey());
+        Log.d(TAG, "onBindViewHolder: "+mDataset.get(position).getKey());
+        holder.key.setVisibility(View.GONE);
 
     }
 
@@ -135,4 +143,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     public long getItemId(int position) {
         return position;
     }
+
 }

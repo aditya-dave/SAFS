@@ -1,6 +1,7 @@
 package com.test.safs.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -35,7 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UpcomingFragment extends Fragment {
+public class UpcomingFragment extends Fragment{
 
     private static final String TAG = "UpcomingFragment";
 
@@ -53,14 +55,6 @@ public class UpcomingFragment extends Fragment {
     private MyAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Activity> listActivity;
-
-    //vars
-    private ArrayList<Activity> mActivity;
-    private ListView mListView;
-    //private MainFeedListAdapter mAdapter;
-    private int mResults;
-    private Context context;
-
 
     @Nullable
     @Override
@@ -88,29 +82,40 @@ public class UpcomingFragment extends Fragment {
         // Write a message to the database
         DatabaseReference databaseReference = myRef.child(this.getString(R.string.dbname_activities));
         Query query = databaseReference.orderByChild(this.getString(R.string.field_date));
+        databaseReference.keepSynced(true);
 
         query.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot snapshot) {
+            public void onDataChange(final DataSnapshot snapshot) {
 
+                listActivity.clear();
                 mAdapter = new MyAdapter(getActivity(), listActivity, new CustomItemClickListener() {
                     @Override
                     public void onItemClick(View v, int position) {
+                        Activity activity = new Activity();
                         Log.d(TAG, "onItemClick: Clicked position" + position);
+                        TextView tv = v.findViewById(R.id.key);
+                        Log.d(TAG, "onItemClick: "+tv.getText().toString());
+                        //Intent intent = new Intent(getActivity(),OpenActivity.class);
+                        Intent intent = new Intent(getActivity(),ActivityDetails.class);
+                        intent.putExtra("EXTRA_FRAGMENT_NAME","UpcomingFragment");
+                        intent.putExtra("EXTRA_KEY",tv.getText().toString());
+                        startActivity(intent);
                     }
                 });
                 recyclerView.setAdapter(mAdapter);
+                mAdapter.notifyDataSetChanged();
                 recyclerView.setLayoutManager(layoutManager);
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
                     Log.d(TAG, "onDataChange: Getting Activities list");
                     Log.d(TAG, "onDataChange: "+ snapshot);
                     Activity activity = dataSnapshot.getValue(Activity.class);
                     listActivity.add(activity);
                     Log.d(TAG, "onDataChange: Activities added to list");
-
                 }
+                mAdapter.notifyDataSetChanged();
+
             }
 
             @Override
@@ -121,4 +126,5 @@ public class UpcomingFragment extends Fragment {
 
 
     }
+
 }

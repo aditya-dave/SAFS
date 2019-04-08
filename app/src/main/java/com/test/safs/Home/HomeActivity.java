@@ -6,8 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +14,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,10 +21,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.test.safs.Engage.EngageActivity;
 import com.test.safs.Profile.ProfileActivity;
 import com.test.safs.R;
 import com.test.safs.Utils.SectionsPagerAdapter;
+import com.test.safs.Utils.UniversalImageLoader;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -67,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: starting ");
 
         setUpViewPager();
-
+        initImageLoader();
         TextView textView_createActivity = findViewById(R.id.textview_CreateActivity);
         textView_createActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,20 +108,27 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    private void initImageLoader() {
+        UniversalImageLoader universalImageLoader = new UniversalImageLoader(HomeActivity.this);
+        ImageLoader.getInstance().init(universalImageLoader.getConfig());
+
+    }
+
     private void setUpViewPager(){
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new UpcomingFragment());
-        adapter.addFragment(new PastFragment());
-        adapter.addFragment(new CanceledFragment());
+        adapter.addFragment(new JoinedFragment());
+        adapter.addFragment(new CreatedFragment());
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
+        viewPager.setOffscreenPageLimit(3);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
         tabLayout.getTabAt(0).setText("Upcoming");
-        tabLayout.getTabAt(1).setText("Past");
-        tabLayout.getTabAt(2).setText("Canceled");
+        tabLayout.getTabAt(1).setText("Joined");
+        tabLayout.getTabAt(2).setText("Created");
     }
 }

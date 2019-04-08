@@ -7,6 +7,7 @@ android {
         applicationId "com.test.safs"
         minSdkVersion 16
         targetSdkVersion 27
+        multiDexEnabled true;
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -72,9 +73,15 @@ dependencies {
     //Firebase Chat
     implementation 'com.google.firebase:firebase-database:16.1.0'
     implementation 'com.google.firebase:firebase-inappmessaging:17.1.1'
-    implementation'com.google.firebase:firebase-inappmessaging-display:17.1.1'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:17.1.1'
 
     //ScaleDrone
     implementation 'com.scaledrone:scaledrone-java:0.6.0'
+
+    //Google Location Services
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+
+
 
 }
