@@ -8,13 +8,13 @@ public class UserAccountSettings implements Parcelable {
     private long activities;
     private String name;
     private long friends;
-    private String profile_photo;
+    private String profilephoto;
 
-    public UserAccountSettings(long activities, String name, long friends, String profile_photo) {
+    public UserAccountSettings(long activities, String name, long friends, String profilephoto) {
         this.activities = activities;
         this.name = name;
         this.friends = friends;
-        this.profile_photo = profile_photo;
+        this.profilephoto = profilephoto;
     }
 
     public UserAccountSettings(){
@@ -24,7 +24,7 @@ public class UserAccountSettings implements Parcelable {
         activities = in.readLong();
         name = in.readString();
         friends = in.readLong();
-        profile_photo = in.readString();
+        profilephoto = in.readString();
     }
 
     public static final Creator<UserAccountSettings> CREATOR = new Creator<UserAccountSettings>() {
@@ -63,12 +63,12 @@ public class UserAccountSettings implements Parcelable {
         this.friends = friends;
     }
 
-    public String getProfile_photo() {
-        return profile_photo;
+    public String getprofilephoto() {
+        return profilephoto;
     }
 
-    public void setProfile_photo(String profile_photo) {
-        this.profile_photo = profile_photo;
+    public void setprofilephoto(String profilephoto) {
+        this.profilephoto = profilephoto;
     }
 
     @Override
@@ -77,7 +77,7 @@ public class UserAccountSettings implements Parcelable {
                 "activities=" + activities +
                 ", name='" + name + '\'' +
                 ", friends=" + friends +
-                ", profile_photo='" + profile_photo + '\'' +
+                ", profilephoto='" + profilephoto + '\'' +
                 '}';
     }
 
@@ -91,6 +91,6 @@ public class UserAccountSettings implements Parcelable {
         parcel.writeLong(activities);
         parcel.writeString(name);
         parcel.writeLong(friends);
-        parcel.writeString(profile_photo);
+        parcel.writeString(profilephoto);
     }
 }

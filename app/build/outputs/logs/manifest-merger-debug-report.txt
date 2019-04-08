@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\d94ee2ef2a6b1bf62383437f8e703679\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\893b8c12d2cd7271d0c7608cc9976b28\AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\d70e6d197c35f35d9598b44c9c61ef8b\AndroidManifest.xml:17:1-24:12
@@ -73,20 +73,20 @@ MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\ADI\.gradle\caches\tra
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\b012d0f7ba29872dbd998e340f335059\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.1] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\f6be0796edb7ae8db346d2e8bbefe0d6\AndroidManifest.xml:2:1-11:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\7818e46673de88fd8cdc78a14013c455\AndroidManifest.xml:15:1-21:12
-INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
+INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
 	package
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:3:5-28
 		INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
 		INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-63:12
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:1-71:12
 		INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:2:11-69
@@ -115,11 +115,11 @@ ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:6:5-80
 	android:name
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:6:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:10:5-81
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:8:22-78
 application
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:13:5-61:19
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:10:5-69:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\893b8c12d2cd7271d0c7608cc9976b28\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\893b8c12d2cd7271d0c7608cc9976b28\AndroidManifest.xml:10:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\d70e6d197c35f35d9598b44c9c61ef8b\AndroidManifest.xml:22:5-20
@@ -185,95 +185,117 @@ MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\ADI\.gradle\caches\tra
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\ADI\.gradle\caches\transforms-2\files-2.1\6f9fb6f88137547a36507b05bed5cca5\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:19:9-40
-activity#com.test.safs.Home.HomeActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:20:9-23:61
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:16:9-40
+activity#com.test.safs.Home.ActivityDetails
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:17:9-25:20
+	android:parentActivityName
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:20:13-60
 	android:label
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:19:13-59
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:23:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:21:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:21:13-46
-activity#com.test.safs.Engage.EngageActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:24:9-26:52
-	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:26:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:18:13-49
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:22:13-24:67
+	android:value
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:24:17-64
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:25:13-50
-activity#com.test.safs.Profile.ProfileActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:27:9-29:52
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:23:17-63
+activity#com.test.safs.Home.HomeActivity
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:26:9-29:52
+	android:label
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:28:13-56
 	android:theme
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:29:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:28:13-52
-activity#com.test.safs.Profile.EditProfileActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:30:9-32:61
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:27:13-46
+activity#com.test.safs.Engage.EngageActivity
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:30:9-32:52
 	android:theme
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:32:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:31:13-56
-activity#com.test.safs.Profile.UserProfile
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:31:13-50
+activity#com.test.safs.Profile.ProfileActivity
 ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:33:9-35:52
 	android:theme
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:35:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:34:13-48
-activity#com.test.safs.Home.CreateActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:36:9-39:52
-	android:parentActivityName
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:38:13-60
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:34:13-52
+activity#com.test.safs.Profile.ViewProfile
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:36:9-38:52
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:39:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:38:13-49
 	android:name
 		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:37:13-48
-activity#com.test.safs.ChooseSports
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:40:9-42:52
+activity#com.test.safs.Profile.EditProfileActivity
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:39:9-41:52
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:42:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:41:13-41
-activity#com.test.safs.LoginActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:43:9-52:20
-	android:noHistory
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:40:13-56
+activity#com.test.safs.Profile.UserProfile
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:42:9-44:52
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:46:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:44:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:44:13-42
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:47:13-51:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:48:17-69
-	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:48:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:50:17-77
-	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:50:27-74
-activity#com.test.safs.SignupActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:53:9-56:52
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:43:13-48
+activity#com.test.safs.Home.CreateActivity
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:45:9-48:52
 	android:parentActivityName
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:55:13-56
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:47:13-60
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:56:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:48:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:54:13-43
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:46:13-48
+activity#com.test.safs.ChooseSports
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:49:9-51:52
+	android:theme
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:51:13-49
+	android:name
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:50:13-41
+activity#com.test.safs.LoginActivity
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:52:9-61:20
+	android:noHistory
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:54:13-37
+	android:theme
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:55:13-49
+	android:name
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:53:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:56:13-60:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:57:17-69
+	android:name
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:57:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:59:17-77
+	android:name
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:59:27-74
+activity#com.test.safs.SignupActivity
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:62:9-65:52
+	android:parentActivityName
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:64:13-56
+	android:theme
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:65:13-49
+	android:name
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:63:13-43
 activity#com.test.safs.Home.OpenActivity
-ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:57:9-58:51
+ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:66:9-68:52
 	android:theme
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:58:13-49
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:68:13-49
 	android:name
-		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:57:19-52
+		ADDED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml:67:13-46
 uses-sdk
 INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ADI\Desktop\SAFS\app\src\main\AndroidManifest.xml

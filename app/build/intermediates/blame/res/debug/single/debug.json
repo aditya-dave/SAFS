@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_playersjoined_listitem.xml.flat",
+        "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\layout_playersjoined_listitem.xml"
+    },
+    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_dropdown_item_icons_2line.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
@@ -900,10 +904,6 @@
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_past.xml.flat",
-        "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\fragment_past.xml"
-    },
-    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_slow_in.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\interpolator-v21\\mtrl_fast_out_slow_in.xml"
     },
@@ -1576,6 +1576,10 @@
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\color\\switch_thumb_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_profile.xml.flat",
+        "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\activity_view_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\f004a24c790639cd80622bda35deaa7a\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -1982,6 +1986,10 @@
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_mtrl_fast_out_linear_in.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\interpolator\\mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_details.xml.flat",
+        "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\activity_details.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -2566,6 +2574,10 @@
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
         "source": "C:\\Users\\ADI\\.gradle\\caches\\transforms-2\\files-2.1\\d70e6d197c35f35d9598b44c9c61ef8b\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_joined.xml.flat",
+        "source": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\src\\main\\res\\layout\\fragment_joined.xml"
     },
     {
         "merged": "C:\\Users\\ADI\\Desktop\\SAFS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",

@@ -12,7 +12,7 @@ import com.test.safs.R;
 
 public class MessagesFragment extends Fragment {
 
-    private static final String TAG = "PastFragment";
+    private static final String TAG = "JoinedFragment";
 
     @Nullable
     @Override

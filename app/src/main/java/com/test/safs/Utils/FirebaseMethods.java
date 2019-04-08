@@ -69,6 +69,63 @@ public class FirebaseMethods {
         return count;
     }
 
+    public UserSettings getUserSettingsViewProfile(DataSnapshot dataSnapshot,String userkey) {
+        Log.d(TAG, "getUserAccountSettings: retrieving user account settings from database");
+        UserAccountSettings settings = new UserAccountSettings();
+        User user = new User();
+
+        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+            if (ds.getKey().equals(mContext.getString(R.string.dbname_user_account_settings))) {
+                Log.d(TAG, "getUserAccountSettings: datasnapshot" + ds);
+                settings.setname(
+                        ds.child(userkey)
+                                .getValue(UserAccountSettings.class)
+                                .getname()
+                );
+
+
+                settings.setprofilephoto(
+                        ds.child(userkey)
+                                .getValue(UserAccountSettings.class)
+                                .getprofilephoto()
+                );
+
+                settings.setactivities(
+                        ds.child(userkey)
+                                .getValue(UserAccountSettings.class)
+                                .getactivities()
+                );
+
+                settings.setFriends(
+                        ds.child(userkey)
+                                .getValue(UserAccountSettings.class)
+                                .getFriends()
+                );
+            }
+            if (ds.getKey().equals(mContext.getString(R.string.dbname_users))) {
+                Log.d(TAG, "getUserAccountSettings: datasnapshot" + ds);
+                user.setEmail(
+                        ds.child(userkey)
+                                .getValue(User.class)
+                                .getEmail()
+                );
+                user.setPhone_number(
+                        ds.child(userkey)
+                                .getValue(User.class)
+                                .getPhone_number()
+                );
+                user.setUser_id(
+                        ds.child(userkey)
+                                .getValue(User.class)
+                                .getUser_id()
+                );
+                Log.d(TAG, "getUserAccountSettings: Retrieved user information" + user.toString());
+
+            }
+        }
+        return new UserSettings(user, settings);
+    }
+
     public UserSettings getUserSettings(DataSnapshot dataSnapshot) {
         Log.d(TAG, "getUserAccountSettings: retrieving user account settings from database");
         UserAccountSettings settings = new UserAccountSettings();
@@ -84,10 +141,10 @@ public class FirebaseMethods {
                 );
 
 
-                settings.setProfile_photo(
+                settings.setprofilephoto(
                         ds.child(userID)
                                 .getValue(UserAccountSettings.class)
-                                .getProfile_photo()
+                                .getprofilephoto()
                 );
 
                 settings.setactivities(
@@ -145,7 +202,7 @@ public class FirebaseMethods {
                 Log.d(TAG, "Name: "+userSettings.getSettings().getname());
                 activity.setName(userSettings.getSettings().getname());
                 //Log.d(TAG, "Name in activity: "+activity.getName());
-                activity.setProfilephoto(userSettings.getSettings().getProfile_photo());
+                activity.setProfilephoto(userSettings.getSettings().getprofilephoto());
                 Log.d(TAG, "Name in activity: "+activity.getName());
                 if (activity.getName() != null) {
                     Log.d(TAG, "createnewActivity: Name is not null. Value is: " + activity.getName());
@@ -222,9 +279,14 @@ public class FirebaseMethods {
     }
 
 
+    public void LeaveActivity(final String activityKey) {
+        Log.d(TAG, "JoinActivity: Adding activity to user_activities_joined");
+        // Read from the database
 
-
-
+        DatabaseReference databaseReference = myRef.child(mContext.getString(R.string.dbname_user_activities_joined)).child(userID).child(activityKey);
+        databaseReference.removeValue();
+        Log.d(TAG, "LeaveActivity: Removed Activity "+activityKey);
+    }
 
 /*    public void setActivityJoined(Context context){
 

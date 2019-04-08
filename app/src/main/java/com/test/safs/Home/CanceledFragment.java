@@ -18,7 +18,7 @@ public class CanceledFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_past,container,false);
+        View view = inflater.inflate(R.layout.fragment_joined,container,false);
 
         return view;
     }

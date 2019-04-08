@@ -56,14 +56,6 @@ public class UpcomingFragment extends Fragment{
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Activity> listActivity;
 
-    //vars
-    private ArrayList<Activity> mActivity;
-    private ListView mListView;
-    //private MainFeedListAdapter mAdapter;
-    private int mResults;
-    private Context context;
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -90,6 +82,7 @@ public class UpcomingFragment extends Fragment{
         // Write a message to the database
         DatabaseReference databaseReference = myRef.child(this.getString(R.string.dbname_activities));
         Query query = databaseReference.orderByChild(this.getString(R.string.field_date));
+        databaseReference.keepSynced(true);
 
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -102,7 +95,9 @@ public class UpcomingFragment extends Fragment{
                         Log.d(TAG, "onItemClick: Clicked position" + position);
                         TextView tv = v.findViewById(R.id.key);
                         Log.d(TAG, "onItemClick: "+tv.getText().toString());
-                        Intent intent = new Intent(getActivity(),OpenActivity.class);
+                        //Intent intent = new Intent(getActivity(),OpenActivity.class);
+                        Intent intent = new Intent(getActivity(),ActivityDetails.class);
+                        intent.putExtra("EXTRA_FRAGMENT_NAME","UpcomingFragment");
                         intent.putExtra("EXTRA_KEY",tv.getText().toString());
                         startActivity(intent);
                     }

@@ -1,4 +1,4 @@
-# Referenced at C:\Users\ADI\Desktop\SAFS\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
+# Referenced at C:\Users\ADI\Desktop\SAFS\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:20
 -keep class android.support.multidex.MultiDexApplication { <init>(); }
-# Referenced at C:\Users\ADI\Desktop\SAFS\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
+# Referenced at C:\Users\ADI\Desktop\SAFS\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:20
 -keep class android.support.v4.app.CoreComponentFactory { <init>(); }

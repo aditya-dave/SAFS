@@ -117,7 +117,7 @@ public class UserProfile extends AppCompatActivity {
         User user = userSettings.getUser();
         UserAccountSettings settings = userSettings.getSettings();
 
-        UniversalImageLoader.setImage(settings.getProfile_photo(),profilephoto,null,"");
+        UniversalImageLoader.setImage(settings.getprofilephoto(),profilephoto,null,"");
         mProgressBar.setVisibility(View.GONE);
 
         String nameUpper = settings.getname();

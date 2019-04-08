@@ -2,12 +2,10 @@ package com.test.safs.Home;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -16,11 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,20 +26,15 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.test.safs.R;
-import com.test.safs.Utils.ActivityInformation;
 import com.test.safs.Utils.CustomItemClickListener;
 import com.test.safs.Utils.JoinedFragmentAdapter;
-import com.test.safs.Utils.MainFeedListAdapter;
-import com.test.safs.Utils.MyAdapter;
 import com.test.safs.models.Activity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
-public class PastFragment extends Fragment {
+public class JoinedFragment extends Fragment {
 
-    private static final String TAG = "PastFragment";
+    private static final String TAG = "JoinedFragment";
 
     //firebase
     private FirebaseAuth mAuth;
@@ -80,7 +71,7 @@ public class PastFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         Log.d(TAG, "onCreateView: Creating Past fragment");
-        View view = inflater.inflate(R.layout.fragment_past, container, false);
+        View view = inflater.inflate(R.layout.fragment_joined, container, false);
 
         recyclerViewJoined = (RecyclerView) view.findViewById(R.id.recyclerviewjoined);
         recyclerViewJoined.setHasFixedSize(true);
@@ -118,7 +109,8 @@ public class PastFragment extends Fragment {
                         Log.d(TAG, "onItemClick: Clicked position" + position);
                         TextView tv = v.findViewById(R.id.key);
                         Log.d(TAG, "onItemClick: "+tv.getText().toString());
-                        Intent intent = new Intent(getActivity(),OpenActivity.class);
+                        Intent intent = new Intent(getActivity(),ActivityDetails.class);
+                        intent.putExtra("EXTRA_FRAGMENT_NAME","JoinedFragment");
                         intent.putExtra("EXTRA_KEY",tv.getText().toString());
                         startActivity(intent);
                     }

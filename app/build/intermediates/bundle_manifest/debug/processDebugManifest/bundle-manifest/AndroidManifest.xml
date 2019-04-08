@@ -9,10 +9,8 @@
         android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- Include following permission if you load images from Internet -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Include following permission if you want to cache images on SD card -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Include following permission if you load images from Internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Include following permission if you want to cache images on SD card -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -31,6 +29,15 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.test.safs.Home.ActivityDetails"
+            android:label="@string/title_activity_details"
+            android:parentActivityName="com.test.safs.Home.HomeActivity"
+            android:theme="@style/AppTheme.Dark" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.safs.Home.HomeActivity" />
+        </activity>
+        <activity
             android:name="com.test.safs.Home.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.Dark" />
@@ -39,6 +46,9 @@
             android:theme="@style/AppTheme.Dark" />
         <activity
             android:name="com.test.safs.Profile.ProfileActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.test.safs.Profile.ViewProfile"
             android:theme="@style/AppTheme.Dark" />
         <activity
             android:name="com.test.safs.Profile.EditProfileActivity"
@@ -70,10 +80,7 @@
         <activity
             android:name="com.test.safs.Home.OpenActivity"
             android:theme="@style/AppTheme.Dark" />
-        <!--
-            <activity android:name=".Home.ChatActivity"
-            android:theme="@style/AppTheme.Dark"/>
-        -->
+
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:exported="false" >

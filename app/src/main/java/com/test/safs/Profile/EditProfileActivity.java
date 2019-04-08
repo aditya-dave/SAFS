@@ -185,7 +185,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
-                final StorageReference ref = storageReference.child("profile_photos/" + mAuth.getCurrentUser().getUid());
+                final StorageReference ref = storageReference.child("profilephotos/" + mAuth.getCurrentUser().getUid());
                 //mFirebaseMethods.updateprofilephoto(url);
                 //mFirebaseMethods.uploadprofilephoto(url);
             }
@@ -202,7 +202,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            final StorageReference ref = storageReference.child("profile_photos/"+ mAuth.getCurrentUser().getUid());
+            final StorageReference ref = storageReference.child("profilephotos/"+ mAuth.getCurrentUser().getUid());
             ref.putFile(filePath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -268,7 +268,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
         User user = userSettings.getUser();
         UserAccountSettings settings = userSettings.getSettings();
 
-        UniversalImageLoader.setImage(settings.getProfile_photo(), mProfilephoto, progressBar, "");
+        UniversalImageLoader.setImage(settings.getprofilephoto(), mProfilephoto, progressBar, "");
 
 
         String nameUpper = settings.getname();

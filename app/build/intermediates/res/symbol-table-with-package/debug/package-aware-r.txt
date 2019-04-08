@@ -887,6 +887,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1185,6 +1186,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id activity_engage_textview
+id activitydetails
 id add
 id adjust_height
 id adjust_width
@@ -1300,6 +1302,7 @@ id input_reEnterPassword
 id invisible
 id italic
 id item_mainfeed
+id item_playersjoined
 id item_touch_helper_previous_elevation
 id key
 id labeled
@@ -1351,6 +1354,7 @@ id parent_matrix
 id passwordedittext
 id percent
 id pin
+id players
 id profileProgressBar
 id profileToolbar
 id profilephoto
@@ -1359,14 +1363,19 @@ id progress_horizontal
 id radio
 id recyclerview
 id recyclerviewjoined
+id recyclerviewplayersjoined
 id rellayout1
 id rellayout2
 id rellayout3
 id rellayout4
 id rellayout5
+id rellayoutMiddlesection
 id rellayoutbottomnav
 id rellayoutcenterviewpager
+id rellayoutjoinactivity
 id rellayoutmain
+id rellayoutplayers
+id rellayouttoolbar
 id right
 id right_icon
 id right_side
@@ -1450,6 +1459,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toolbar
+id toolbar_activitydetails
 id toolbar_userprofile
 id top
 id topPanel
@@ -1521,6 +1531,7 @@ layout abc_tooltip
 layout activity_chat
 layout activity_choose_sports
 layout activity_create_activity
+layout activity_details
 layout activity_editprofile
 layout activity_engage
 layout activity_home
@@ -1529,6 +1540,7 @@ layout activity_open_activity
 layout activity_profile
 layout activity_signup
 layout activity_user_profile
+layout activity_view_profile
 layout banner
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -1549,8 +1561,8 @@ layout design_text_input_password_icon
 layout dialog_confirm_password
 layout dialog_join_activity
 layout fragment_canceled
+layout fragment_joined
 layout fragment_messages
-layout fragment_past
 layout fragment_signout
 layout fragment_upcoming
 layout image
@@ -1559,6 +1571,7 @@ layout layout_center_profile
 layout layout_center_viewpager
 layout layout_mainfeed_listitem
 layout layout_message_fragment_tab
+layout layout_playersjoined_listitem
 layout layout_top_tabs
 layout modal
 layout modal_portrait_inner
@@ -1703,6 +1716,7 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_details
 string title_activity_home
 string title_activity_main2
 string title_activity_testing_bottom_navigation
@@ -1716,8 +1730,11 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style AppTheme
+style AppTheme_AppBarOverlay
 style AppTheme_Dark
 style AppTheme_Dark_Dialog
+style AppTheme_NoActionBar
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
