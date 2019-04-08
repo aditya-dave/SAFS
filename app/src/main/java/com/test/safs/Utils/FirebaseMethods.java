@@ -142,7 +142,6 @@ public class FirebaseMethods {
                                 .getname()
                 );
 
-
                 settings.setprofilephoto(
                         ds.child(userID)
                                 .getValue(UserAccountSettings.class)
@@ -322,67 +321,6 @@ public class FirebaseMethods {
         databaseReference.removeValue();
         databaseReference1.removeValue();
     }
-
-/*    public void setActivityJoined(Context context){
-
-        myRef.child(mContext.getString(R.string.dbname_activities))
-                .child(mAuth.getInstance().getCurrentUser().getUid()).setValue();
-
-
-        myRef.child(mContext.getString(R.string.dbname_user_activities))
-                .child(mAuth.getInstance().getCurrentUser().getUid()).setValue();
-    }*/
-
-    /*public void uploadprofilephoto(String imgURL){
-        FilePaths filePaths = new FilePaths();
-        Log.d(TAG, "uploadprofilephoto: Attempting to update profile photo");
-        String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        StorageReference storageReference = mStorageReference
-                .child(filePaths.FIREBASE_IMAGE_STORAGE + "/" + user_id);
-
-        //convert imageURL to bitmap
-        Bitmap bitmap = ImageManager.getBitmap(imgURL);
-        byte[] bytes = ImageManager.getBytesFromBitmap(bitmap, 100);
-
-        UploadTask uploadTask = null;
-        uploadTask = storageReference.putBytes(bytes);
-        final ProgressDialog progressDialog = new ProgressDialog(mContext);
-        progressDialog.setTitle("Uploading...");
-        progressDialog.show();
-
-        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-                mStorageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-                        Log.e("Tuts+", "uri: " + uri.toString());
-                        //Handle whatever you're going to do with the URL here
-                        String url = uri.toString();
-                        myRef.child(mContext.getString(R.string.dbname_user_account_settings))
-                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                .child(mContext.getString(R.string.field_profilephoto))
-                                .setValue(url);
-                    }
-                });
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.d(TAG, "onFailure: Upload failed");
-            }
-        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-
-                double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
-                        .getTotalByteCount());
-                progressDialog.setMessage("Uploaded "+(int)progress+"%");
-            }
-        });
-    }*/
 
     public void updateprofilephoto(String url) {
         Log.d(TAG, "updateprofilephoto: Attempting to update profile photo" + url);

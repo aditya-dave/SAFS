@@ -2,6 +2,7 @@ package com.test.safs.Profile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -41,8 +44,10 @@ public class ViewProfile extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private FirebaseMethods mFirebaseMethods;
     private DatabaseReference myRef;
+    private DatabaseReference FriendRequestRef;
 
-    private Button editprofilebutton;
+    //Vars
+    private Button Addfriendbutton;
     private ImageView backarrow;
     private ProgressBar mProgressBar;
     private ImageView profilephoto;
@@ -54,6 +59,7 @@ public class ViewProfile extends AppCompatActivity {
     private TextView user_id;
     private TextView userProfile;
     private String userkey;
+    private String CURRENT_STATE;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,17 +69,31 @@ public class ViewProfile extends AppCompatActivity {
         setupActivityWidgets();
         initImageLoader();
         setProfileImage();
-
         userkey=getIntent().getStringExtra("EXTRA_USERKEY");
 
-        editprofilebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        MaintainAddFriendButton();
+        if(!mAuth.getCurrentUser().getUid().equals(userkey)){
+            Addfriendbutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                 /*Intent intent = new Intent(ViewProfile.this, EditProfileActivity.class);
                 intent.putExtra(getString(R.string.calling_activity),getString(R.string.editprofile_activity));
                 startActivity(intent);*/
-            }
-        });
+                if(CURRENT_STATE.equals("not_friends")){
+                    SendFriendRequest();
+                }
+                if(CURRENT_STATE.equals("request_sent")){
+                    CancelFriendRequest();
+                }
+
+                }
+            });
+        }
+        else{
+            Addfriendbutton.setEnabled(false);
+            Addfriendbutton.setVisibility(View.GONE);
+        }
+
 
         mFirebaseMethods = new FirebaseMethods(ViewProfile.this);
         Log.d(TAG, "onCreate: FirebaseMethods Instance created");
@@ -81,7 +101,6 @@ public class ViewProfile extends AppCompatActivity {
         /*Toolbar toolbar = findViewById(R.id.profileToolbar);
         setSupportActionBar(toolbar);*/
         backarrow = (ImageView) findViewById(R.id.backarrow);
-
         backarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,8 +114,6 @@ public class ViewProfile extends AppCompatActivity {
         public void onDataChange(DataSnapshot dataSnapshot) {
             // This method is called once with the initial value and again
             // whenever data at this location is updated.
-            Log.d(TAG, "Value is: " + dataSnapshot);
-
             //retrieve user information from the database
             setProfileWidget(mFirebaseMethods.getUserSettingsViewProfile(dataSnapshot,userkey));
         }
@@ -108,6 +125,72 @@ public class ViewProfile extends AppCompatActivity {
         }
     });
 
+    }
+
+    private void MaintainAddFriendButton(){
+        FriendRequestRef.child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.hasChild(userkey)){
+                    String request_type = dataSnapshot.child(userkey).child("request_type").getValue().toString();
+
+                    if(request_type.equals("sent")){
+                        CURRENT_STATE="request_sent";
+                        Addfriendbutton.setText("Cancel Friend Request");
+
+                    }
+                    if(request_type.equals("received")){
+                        CURRENT_STATE="request_received";
+                        Addfriendbutton.setText("Accept Friend Request");
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void CancelFriendRequest() {
+        FriendRequestRef.child(mAuth.getCurrentUser().getUid()).child(userkey).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    FriendRequestRef.child(userkey).child(mAuth.getCurrentUser().getUid()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                CURRENT_STATE="not_friends";
+                                Addfriendbutton.setText("Add Friend");
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+
+    private void SendFriendRequest() {
+        FriendRequestRef.child(mAuth.getCurrentUser().getUid()).child(userkey).child("request_type").setValue("sent").addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    FriendRequestRef.child(userkey).child(mAuth.getCurrentUser().getUid()).child("request_type").setValue("received").addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                CURRENT_STATE="request_sent";
+                                Addfriendbutton.setText("Cancel Friend Request");
+                            }
+                        }
+                    });
+                }
+            }
+        });
     }
 
     private void setProfileWidget(UserSettings userSettings){
@@ -125,7 +208,7 @@ public class ViewProfile extends AppCompatActivity {
         activities.setText(String.valueOf(settings.getactivities()));
         friends.setText(String.valueOf(settings.getFriends()));
         userProfile.setText(String.valueOf(settings.getname()));
-        editprofilebutton.setText("Add Friend");
+        Addfriendbutton.setText("Add Friend");
 
     }
 
@@ -148,6 +231,7 @@ public class ViewProfile extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         myRef = firebaseDatabase.getReference();
+        FriendRequestRef = FirebaseDatabase.getInstance().getReference().child(getString(R.string.dbname_friendrequests));
 
         viewPager = (ViewPager) findViewById(R.id.container);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.rellayout2);
@@ -157,7 +241,8 @@ public class ViewProfile extends AppCompatActivity {
         activities = (TextView) findViewById(R.id.textview_activities);
         friends = (TextView) findViewById(R.id.textviewfriends);
 
-        editprofilebutton = (Button) findViewById(R.id.button_editprofile);
+        CURRENT_STATE="not_friends";
+        Addfriendbutton = (Button) findViewById(R.id.button_editprofile);
         userProfile = (TextView) findViewById(R.id.userprofile);
         mProgressBar = (ProgressBar) findViewById(R.id.profileProgressBar);
     }

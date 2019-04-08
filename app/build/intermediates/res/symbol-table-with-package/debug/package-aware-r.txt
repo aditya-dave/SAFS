@@ -1676,6 +1676,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string confirm_password_dialog
 string dbname_activities
+string dbname_friendrequests
 string dbname_user_account_settings
 string dbname_user_activities
 string dbname_user_activities_joined
