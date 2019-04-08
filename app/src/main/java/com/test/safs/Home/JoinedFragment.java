@@ -93,7 +93,6 @@ public class JoinedFragment extends Fragment {
         myRef = database.getReference();
         final DatabaseReference myRef = database.getReference();
 
-
         // Write a message to the database
         DatabaseReference databaseReference = myRef.child(this.getString(R.string.dbname_user_activities_joined)).child(mUser.getUid());
         Query query = databaseReference.orderByChild(this.getString(R.string.field_date));
@@ -102,6 +101,7 @@ public class JoinedFragment extends Fragment {
             @Override
             public void onDataChange(final DataSnapshot snapshot) {
 
+                listJoinedActivity.clear();
                 Log.d(TAG, "onDataChange: Value is " + snapshot);
                 mJoinedAdapter = new JoinedFragmentAdapter(getActivity(), listJoinedActivity, new CustomItemClickListener() {
                     @Override

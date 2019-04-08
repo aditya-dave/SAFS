@@ -118,7 +118,7 @@ public class HomeActivity extends AppCompatActivity {
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new UpcomingFragment());
         adapter.addFragment(new JoinedFragment());
-        adapter.addFragment(new CanceledFragment());
+        adapter.addFragment(new CreatedFragment());
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
@@ -129,6 +129,6 @@ public class HomeActivity extends AppCompatActivity {
 
         tabLayout.getTabAt(0).setText("Upcoming");
         tabLayout.getTabAt(1).setText("Joined");
-        tabLayout.getTabAt(2).setText("Canceled");
+        tabLayout.getTabAt(2).setText("Created");
     }
 }

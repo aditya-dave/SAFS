@@ -221,6 +221,18 @@ public class ActivityDetails extends AppCompatActivity {
                     finish();
                 }
             });
+        }
+        if(calling_fragment.equals("CreatedFragment")){
+            buttonJoinActivity.setText("Delete Activity");
+            buttonJoinActivity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d(TAG, "onClick: Attempting to Leave Activity");
+                    mFirebaseMethods.DeleteActivity(key);
+                    Log.d(TAG, "onClick: Removed activity from user's Activities");
+                    finish();
+                }
+            });
 
         }
 

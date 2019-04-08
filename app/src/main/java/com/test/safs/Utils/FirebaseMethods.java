@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -42,6 +43,7 @@ public class FirebaseMethods {
     private FirebaseStorage mFirebaseStorage;
     private StorageReference mStorageReference;
     private String userID;
+    private Integer flag = 0;
     private Activity activity = new Activity();
 
     private Context mContext;
@@ -225,6 +227,7 @@ public class FirebaseMethods {
                         .child(mAuth.getInstance().getCurrentUser().getUid())
                         .child(newActivityKey)
                         .setValue(activity);
+                JoinActivity(newActivityKey);
             }
 
             @Override
@@ -252,8 +255,6 @@ public class FirebaseMethods {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-/*                String value = dataSnapshot.getValue(String.class);
-                Log.d(TAG, "Value is: " + value);*/
                 activity = dataSnapshot.getValue(Activity.class);
                 Log.d(TAG, "Value is: " + activity);
                 UserActivitiesJoined user_activities_joined = new UserActivitiesJoined();
@@ -280,12 +281,46 @@ public class FirebaseMethods {
 
 
     public void LeaveActivity(final String activityKey) {
-        Log.d(TAG, "JoinActivity: Adding activity to user_activities_joined");
-        // Read from the database
+        Log.d(TAG, "JoinActivity: Removing activity from user_activities_joined");
 
-        DatabaseReference databaseReference = myRef.child(mContext.getString(R.string.dbname_user_activities_joined)).child(userID).child(activityKey);
+
+        final DatabaseReference databaseReference = myRef.child(mContext.getString(R.string.dbname_user_activities_joined)).child(userID).child(activityKey);
+
+        DatabaseReference dref = myRef.child(mContext.getString(R.string.dbname_user_activities)).child(userID);
+        dref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds: dataSnapshot.getChildren()){
+                    if(ds.getKey().equals(activityKey)){
+                        flag++;
+                    }
+                }
+                if(flag==0){
+                    databaseReference.removeValue();
+                    Log.d(TAG, "LeaveActivity: Removed Activity "+activityKey);
+                }
+                else {
+                    Log.d(TAG, "LeaveActivity: Can't leave Activity created by User");
+                    Toast.makeText(mContext, "You can not leave your own Activity", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
+    public void DeleteActivity(final String activityKey) {
+        Log.d(TAG, "JoinActivity: Deleting activity from user_activities");
+
+
+        final DatabaseReference databaseReference = myRef.child(mContext.getString(R.string.dbname_user_activities)).child(userID).child(activityKey);
+        DatabaseReference databaseReference1 = myRef.child(mContext.getString(R.string.dbname_activities)).child(activityKey);
         databaseReference.removeValue();
-        Log.d(TAG, "LeaveActivity: Removed Activity "+activityKey);
+        databaseReference1.removeValue();
     }
 
 /*    public void setActivityJoined(Context context){

@@ -1362,6 +1362,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recyclerview
+id recyclerviewcreated
 id recyclerviewjoined
 id recyclerviewplayersjoined
 id rellayout1
@@ -1560,7 +1561,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dialog_confirm_password
 layout dialog_join_activity
-layout fragment_canceled
+layout fragment_created
 layout fragment_joined
 layout fragment_messages
 layout fragment_signout

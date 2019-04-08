@@ -78,7 +78,10 @@ dependencies {
     //ScaleDrone
     implementation 'com.scaledrone:scaledrone-java:0.6.0'
 
-    //Multidex
+    //Google Location Services
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+
 
 
 }

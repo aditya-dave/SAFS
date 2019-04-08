@@ -88,6 +88,7 @@ public class UpcomingFragment extends Fragment{
             @Override
             public void onDataChange(final DataSnapshot snapshot) {
 
+                listActivity.clear();
                 mAdapter = new MyAdapter(getActivity(), listActivity, new CustomItemClickListener() {
                     @Override
                     public void onItemClick(View v, int position) {
@@ -107,15 +108,14 @@ public class UpcomingFragment extends Fragment{
                 recyclerView.setLayoutManager(layoutManager);
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
                     Log.d(TAG, "onDataChange: Getting Activities list");
                     Log.d(TAG, "onDataChange: "+ snapshot);
                     Activity activity = dataSnapshot.getValue(Activity.class);
                     listActivity.add(activity);
                     Log.d(TAG, "onDataChange: Activities added to list");
-                    mAdapter.notifyDataSetChanged();
-
                 }
+                mAdapter.notifyDataSetChanged();
+
             }
 
             @Override
