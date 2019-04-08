@@ -37,6 +37,8 @@ import com.test.safs.models.Activity;
 import com.test.safs.models.UserAccountSettings;
 import com.test.safs.models.UserSettings;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class ActivityDetails extends AppCompatActivity {
@@ -67,6 +69,7 @@ public class ActivityDetails extends AppCompatActivity {
     private PlayersJoinedAdapter mAdapterPlayersJoined;
     private RecyclerView.LayoutManager layoutManagerPlayersJoined;
     private ArrayList<UserAccountSettings> listPlayers;
+    private ArrayList<String> listUserIDs;
 
     //Widgets
     private de.hdodenhof.circleimageview.CircleImageView profilephoto;
@@ -85,6 +88,7 @@ public class ActivityDetails extends AppCompatActivity {
         Log.d(TAG, "onCreate: ");
 
         listPlayers = new ArrayList<UserAccountSettings>();
+        listUserIDs = new ArrayList<String>();
 
         //RecyclerView
         recyclerViewPlayersJoined = (RecyclerView) findViewById(R.id.recyclerviewplayersjoined);
@@ -146,11 +150,11 @@ public class ActivityDetails extends AppCompatActivity {
                     public void onItemClick(View v, int position) {
                         Activity activity = new Activity();
                         Log.d(TAG, "onItemClick: Clicked position" + position);
-                        Log.d(TAG, "onItemClick: "+userkey);
+                        Log.d(TAG, "onItemClick: "+listUserIDs.get(position));
                         //Intent intent = new Intent(getActivity(),OpenActivity.class);
                         Intent intent = new Intent(ActivityDetails.this, ViewProfile.class);
                         //intent.putExtra("EXTRA_KEY",tv.getText().toString());
-                        intent.putExtra("EXTRA_USERKEY",userkey);
+                        intent.putExtra("EXTRA_USERKEY",listUserIDs.get(position));
                         startActivity(intent);
                     }
                 });
@@ -165,6 +169,7 @@ public class ActivityDetails extends AppCompatActivity {
                     if(ds.child(key).exists()){
                         Log.d(TAG, "onDataChange: Exists"+ds.child(key));
                         userkey= (ds.getKey());
+                        listUserIDs.add(userkey);
                         Log.d(TAG, "onDataChange: "+userkey);
                         myRef.child(getString(R.string.dbname_user_account_settings)).child(userkey).getRef().addValueEventListener(new ValueEventListener() {
                             @Override
@@ -177,6 +182,7 @@ public class ActivityDetails extends AppCompatActivity {
                                 listPlayers.add(userAccountSettings);
                                 mAdapterPlayersJoined.notifyDataSetChanged();
                                 Log.d(TAG, "List"+listPlayers);
+                                Log.d(TAG, "onDataChange: List UserIDs"+listUserIDs);
                             }
 
                             @Override
@@ -194,8 +200,6 @@ public class ActivityDetails extends AppCompatActivity {
             }
 
         });
-
-
 
         //JoinActivity Button
         buttonJoinActivity = findViewById(R.id.buttonJoinActivity);

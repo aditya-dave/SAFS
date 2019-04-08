@@ -136,7 +136,6 @@ public class LoginActivity extends AppCompatActivity {
         Log.d(TAG, "onLoginSuccess: Login Successful");
         loginButton.setEnabled(true);
         Toast.makeText(this,"Authenticated",Toast.LENGTH_SHORT).show();
-        finish();
         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(intent);
         finish();

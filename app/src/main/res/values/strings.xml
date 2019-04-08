@@ -66,6 +66,7 @@
     <string name="dbname_users">users</string>
     <string name="dbname_user_account_settings">user_account_settings</string>
     <string name="dbname_activities">activities</string>
+    <string name="dbname_friendrequests">friendrequests</string>
     <string name="dbname_user_activities_joined">user_activities_joined</string>
     <string name="field_profilephoto">profilephoto</string>
     <string name="field_profile_photo">profile_photo</string>

@@ -9,7 +9,6 @@ public class UserAccountSettings implements Parcelable {
     private String name;
     private long friends;
     private String profilephoto;
-
     public UserAccountSettings(long activities, String name, long friends, String profilephoto) {
         this.activities = activities;
         this.name = name;
@@ -17,7 +16,7 @@ public class UserAccountSettings implements Parcelable {
         this.profilephoto = profilephoto;
     }
 
-    public UserAccountSettings(){
+    public UserAccountSettings() {
     }
 
     protected UserAccountSettings(Parcel in) {
@@ -51,6 +50,7 @@ public class UserAccountSettings implements Parcelable {
         return name;
     }
 
+
     public void setname(String name) {
         this.name = name;
     }
@@ -73,7 +73,7 @@ public class UserAccountSettings implements Parcelable {
 
     @Override
     public String toString() {
-        return "user_account_settings{" +
+        return "UserAccountSettings{" +
                 "activities=" + activities +
                 ", name='" + name + '\'' +
                 ", friends=" + friends +

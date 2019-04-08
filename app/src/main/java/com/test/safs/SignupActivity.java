@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.test.safs.Home.HomeActivity;
 import com.test.safs.models.User;
 import com.test.safs.models.UserAccountSettings;
 
@@ -87,6 +88,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
     public void signup() {
@@ -112,6 +114,16 @@ public class SignupActivity extends AppCompatActivity {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "createUserWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
+                                if (user != null) {
+                                    user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+                                                Log.d(TAG, "onComplete: Email Sent");
+                                            }
+                                        }
+                                    });
+                                }
                                 userID = user.getUid();
                                 addNewUser(email,phone_number_int,"");
                                 auth = true;
@@ -176,7 +188,7 @@ public class SignupActivity extends AppCompatActivity {
     public void onSignupSuccess() {
         mSignupButton.setEnabled(true);
         //setResult(RESULT_OK, null);
-        Intent intent = new Intent(SignupActivity.this, ChooseSports.class);
+        Intent intent = new Intent(SignupActivity.this, HomeActivity.class);
         startActivity(intent);
         finish();
     }

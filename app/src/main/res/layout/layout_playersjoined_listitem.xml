@@ -42,6 +42,19 @@
                 android:text="Aditya Dave"
                 android:textColor="@color/white" />
 
+            <TextView
+                android:id="@+id/key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:layout_marginTop="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/profilephoto"
+                android:text="key"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+
 
 
         </RelativeLayout>
