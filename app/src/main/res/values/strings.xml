@@ -41,8 +41,8 @@
 
     <string-array name="Time">
 
-        <item>Morning(12AM to 9AM)</item>
-        <item>Noon(9AM to 4PM)</item>
+        <item>Morning(12AM to 12PM)</item>
+        <item>Noon(12AM to 4PM)</item>
         <item>Evening(4PM to 9PM)</item>
         <item>Night(9PM to 12AM)</item>
 

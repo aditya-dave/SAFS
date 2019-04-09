@@ -160,21 +160,4 @@ public class UserProfile extends AppCompatActivity {
 
         mProgressBar = (ProgressBar) findViewById(R.id.profileProgressBar);
     }
-
-
-
-
-    /*public void setupFragment(){
-
-        pagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
-        pagerAdapter.addFragment(new EditProfileFragment(),"EditProfileFragment");
-        pagerAdapter.addFragment(new SignOutFragment(),"SignOutFragment");
-
-    }
-    public void setViewPager(int fragmentNumber){
-        mRelativeLayout.setVisibility(View.GONE);
-        Log.d(TAG, "setupViewPager: Navigating to Fragment Number" + fragmentNumber);
-        viewPager.setAdapter(pagerAdapter);
-        viewPager.setCurrentItem(fragmentNumber);
-    }*/
 }

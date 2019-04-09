@@ -78,11 +78,6 @@ public class CreatedFragmentAdapter extends RecyclerView.Adapter<CreatedFragment
                 .inflate(R.layout.layout_mainfeed_listitem, parent, false);
         final MyViewHolder vh = new MyViewHolder(view);
 
-
-        //Dialong initialization
-        /*myDialog = new Dialog(context);
-        myDialog.setContentView(R.layout.dialog_join_activity);
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));*/
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

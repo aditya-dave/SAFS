@@ -127,6 +127,7 @@
             android:layout_width="match_parent"
             android:background="@color/grey"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
             android:minHeight="450dp"
             android:layout_below="@id/players"
             android:id="@+id/recyclerviewplayersjoined"
@@ -142,7 +143,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:id="@+id/rellayoutjoinactivity"
         android:background="@color/grey"
         android:layout_alignParentBottom="true">
@@ -151,8 +152,8 @@
             android:id="@+id/buttonJoinActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:padding="12dp"
             android:text="Join Activity"/>
 

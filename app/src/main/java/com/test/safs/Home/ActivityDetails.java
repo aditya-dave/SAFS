@@ -228,6 +228,8 @@ public class ActivityDetails extends AppCompatActivity {
         }
         if(calling_fragment.equals("CreatedFragment")){
             buttonJoinActivity.setText("Delete Activity");
+            buttonJoinActivity.setEnabled(false);
+            buttonJoinActivity.setVisibility(View.GONE);
             buttonJoinActivity.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

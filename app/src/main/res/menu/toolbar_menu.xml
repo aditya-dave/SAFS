@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_messages"
-        android:icon="@drawable/ic_messages"
-        android:title="Messages"
+        android:id="@+id/navigation_friendRequest"
+        android:icon="@drawable/ic_friend_request"
+        android:title="FriendRequest"
         app:showAsAction="always"/>
 
 </menu>

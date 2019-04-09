@@ -315,11 +315,12 @@ public class FirebaseMethods {
     public void DeleteActivity(final String activityKey) {
         Log.d(TAG, "JoinActivity: Deleting activity from user_activities");
 
-
-        final DatabaseReference databaseReference = myRef.child(mContext.getString(R.string.dbname_user_activities)).child(userID).child(activityKey);
+        DatabaseReference databaseReference = myRef.child(mContext.getString(R.string.dbname_user_activities)).child(userID).child(activityKey);
         DatabaseReference databaseReference1 = myRef.child(mContext.getString(R.string.dbname_activities)).child(activityKey);
+        DatabaseReference databaseReference2 = myRef.child(mContext.getString(R.string.dbname_user_activities_joined)).child(userID).child(activityKey);
         databaseReference.removeValue();
         databaseReference1.removeValue();
+        databaseReference2.removeValue();
     }
 
     public void updateprofilephoto(String url) {

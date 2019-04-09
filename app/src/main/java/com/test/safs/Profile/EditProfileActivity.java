@@ -54,6 +54,8 @@ import com.test.safs.models.User;
 import com.test.safs.models.UserAccountSettings;
 import com.test.safs.models.UserSettings;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.util.UUID;
 
@@ -75,7 +77,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
 
     //Widgets
     private EditText mDisplayname, mEmail, mPhone_number;
-    private TextView changephoto;
+    private TextView changephoto,genderText;
     private Spinner gender;
     private CircleImageView mProfilePhoto;
     private String selectedgender;
@@ -103,6 +105,7 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
         mDisplayname = (EditText) findViewById(R.id.input_name);
         mEmail = (EditText) findViewById(R.id.input_email);
         mPhone_number = (EditText) findViewById(R.id.input_phone);
+        genderText = (TextView) findViewById(R.id.textviewgender);
         gender = (Spinner) findViewById(R.id.spinner_gender);
         changephoto = (TextView) findViewById(R.id.changeprofilephoto);
         mProfilePhoto = (CircleImageView) findViewById(R.id.profilephoto);
@@ -163,6 +166,8 @@ public class EditProfileActivity extends AppCompatActivity implements ConfirmPas
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getBaseContext(), R.array.Genders,
                 android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        genderText.setVisibility(View.GONE);
+        gender.setVisibility(View.GONE);
         gender.setAdapter(adapter);
         gender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

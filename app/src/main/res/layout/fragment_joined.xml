@@ -12,6 +12,7 @@
         android:divider = "#000"
         android:dividerHeight = "1dp"
         android:footerDividersEnabled = "false"
+        android:layout_marginBottom="70dp"
         android:headerDividersEnabled = "false">
 
     </android.support.v7.widget.RecyclerView>

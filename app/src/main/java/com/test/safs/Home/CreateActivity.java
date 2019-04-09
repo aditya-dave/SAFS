@@ -109,13 +109,8 @@ public class CreateActivity extends AppCompatActivity implements DatePickerDialo
             public void onClick(View view) {
                 //upload the data to firebase
                 Log.d(TAG, "onClick: Attempting to create a new activity");
-                Toast.makeText(CreateActivity.this, "Attempting to create a new activity", Toast.LENGTH_SHORT).show();
-                //String host_name = mUserSettings.getSettings().getDisplay_name();
-                //String host_name = mAuth.getCurrentUser().getDisplayName();
+                Toast.makeText(CreateActivity.this, "Creating a new activity", Toast.LENGTH_SHORT).show();
                 final Activity activity = new Activity();
-                /*Log.d(TAG, mUserAccountSettings.getDisplay_name());
-                Toast.makeText(CreateActivity.this, mUserAccountSettings.getDisplay_name(), Toast.LENGTH_LONG).show();*/
-                //String host_name=activity.getName();
                 String date = edittext_date.getText().toString();
                 String sport_name = edittext_sport_name.getText().toString();
                 String location = edittext_location.getText().toString();
@@ -125,10 +120,14 @@ public class CreateActivity extends AppCompatActivity implements DatePickerDialo
                 activity.setProfilephoto("");
                 activity.setTime(time);
                 Log.d(TAG, "onClick: Calling createnewActivity in FirebaseMethods");
-                String activity_key = mFirebaseMethods.createnewActivity(host_name, sport_name, date, location, time, activities_count);
-                activity.setKey(activity_key);
-                finish();
-
+                if(!location.equals("") && !sport_name.equals("") && !date.equals("") && !time.equals("")){
+                    String activity_key = mFirebaseMethods.createnewActivity(host_name, sport_name, date, location, time, activities_count);
+                    activity.setKey(activity_key);
+                    finish();
+                }
+                else{
+                    Toast.makeText(CreateActivity.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

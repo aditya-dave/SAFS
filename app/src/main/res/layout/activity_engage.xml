@@ -10,28 +10,36 @@
     <include layout="@layout/toolbar"
         android:id="@+id/toolbar"/>
 
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/toolbar_bg">
+
+        <include layout="@layout/layout_top_tabs" />
+
+    </RelativeLayout>
 
     <!-- Middle Layout -->
     <RelativeLayout
+        android:id="@+id/rellayoutcenterviewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar">
+        android:layout_below="@+id/RelativeLayout1"
+        android:background="@color/grey">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:textSize="30sp"
-            android:id="@+id/activity_engage_textview"
-            android:text="Engage Activity"/>
+        <include layout="@layout/layout_center_viewpager" />
 
     </RelativeLayout>
 
     <!--- Bottom Navigation View -->
 
     <RelativeLayout
+        android:id="@+id/rellayoutbottomnav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rellayoutcenterviewpager">
 
         <include layout="@layout/layout_bottom_navigation_view" />
 

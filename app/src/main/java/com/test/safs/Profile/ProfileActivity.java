@@ -1,6 +1,5 @@
 package com.test.safs.Profile;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,13 +18,10 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.test.safs.Engage.EngageActivity;
+import com.test.safs.Engage.FriendRequestFragment;
 import com.test.safs.Home.HomeActivity;
-import com.test.safs.Home.MessagesFragment;
 import com.test.safs.LoginActivity;
-import com.test.safs.Utils.BottomNavigationViewHelper;
 import com.test.safs.R;
-
-import org.w3c.dom.Text;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -33,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    @Override
+ /*   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar_menu,menu);
@@ -43,12 +39,12 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.navigation_messages:
-                Intent intent = new Intent(ProfileActivity.this, MessagesFragment.class);
+            case R.id.navigation_friendRequest:
+                Intent intent = new Intent(ProfileActivity.this, FriendRequestFragment.class);
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

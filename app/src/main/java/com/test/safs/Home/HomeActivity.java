@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
     private String userID;
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar_menu,menu);
@@ -53,12 +53,12 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.navigation_messages:
-                Intent intent = new Intent(HomeActivity.this,MessagesFragment.class);
+                Intent intent = new Intent(HomeActivity.this,FriendRequestFragment.class);
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +67,8 @@ public class HomeActivity extends AppCompatActivity {
 
         setUpViewPager();
         initImageLoader();
+        TextView textView_findActivity = findViewById(R.id.textview_FindActivities);
+        textView_findActivity.setVisibility(View.GONE);
         TextView textView_createActivity = findViewById(R.id.textview_CreateActivity);
         textView_createActivity.setOnClickListener(new View.OnClickListener() {
             @Override
